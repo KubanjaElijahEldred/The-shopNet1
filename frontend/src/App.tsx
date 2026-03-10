@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import FeedbackForm from './components/FeedbackForm';
 import AdminDashboard from './components/AdminDashboard';
 import QRCodeDisplay from './components/QRCodeDisplay';
@@ -44,6 +45,7 @@ function App() {
           <Route path="/qr-codes" element={<QRCodeDisplay />} />
         </Routes>
       </div>
+      <Analytics />
     </Router>
   );
 }
