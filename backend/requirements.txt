@@ -2,6 +2,7 @@ asgiref==3.11.1
 Django==6.0.3
 django-cors-headers==4.9.0
 djangorestframework==3.16.1
+gunicorn
 pillow==12.1.1
 qrcode==8.2
 sqlparse==0.5.5
