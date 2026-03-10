@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useSearchParams } from 'react-router-dom';
 
 interface FeedbackData {
   department: string;
@@ -9,8 +10,9 @@ interface FeedbackData {
 }
 
 const FeedbackForm: React.FC = () => {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState<FeedbackData>({
-    department: '',
+    department: searchParams.get('department') || '',
     rating: '',
     comment: '',
     patient_name: '',

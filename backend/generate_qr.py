@@ -4,7 +4,7 @@ import os
 def generate_qr_codes():
     """Generate QR codes for different hospital departments"""
     
-    base_url = "http://localhost:3000"
+    base_url = "http://localhost:3002"
     
     # QR codes for different departments
     departments = [
